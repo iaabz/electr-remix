@@ -2,6 +2,12 @@
   "name": "electr-remix",
   "private": true,
   "version": "0.0.0",
+  "debug": {
+    "env": {
+      "VITE_DEV_SERVER_URL": "http://127.0.0.1:7777/"
+    }
+  },
+  "type": "module",
   "scripts": {
     "dev": "vite",
     "build": "tsc && vite build && electron-builder",
@@ -9,24 +15,29 @@
     "preview": "vite preview"
   },
   "dependencies": {
+    "@tailwindcss/cli": "^4.0.1",
+    "@tanstack/react-router": "^1.98.1",
     "react": "^18.2.0",
-    "react-dom": "^18.2.0"
+    "react-dom": "^18.2.0",
+    "tailwindcss": "^4.0.1"
   },
   "devDependencies": {
+    "@tanstack/router-devtools": "^1.98.1",
+    "@tanstack/router-plugin": "^1.98.2",
     "@types/react": "^18.2.64",
     "@types/react-dom": "^18.2.21",
     "@typescript-eslint/eslint-plugin": "^7.1.1",
     "@typescript-eslint/parser": "^7.1.1",
     "@vitejs/plugin-react": "^4.2.1",
+    "electron": "^29.1.4",
+    "electron-builder": "^24.13.3",
     "eslint": "^8.57.0",
     "eslint-plugin-react-hooks": "^4.6.0",
     "eslint-plugin-react-refresh": "^0.4.5",
-    "typescript": "^5.2.2",
-    "vite": "^5.1.6",
-    "electron": "^29.1.4",
-    "electron-builder": "^24.13.3",
+    "typescript": "^5.4.2",
+    "vite": "^5.4.11",
     "vite-plugin-electron": "^0.28.4",
     "vite-plugin-electron-renderer": "^0.14.5"
   },
-  "main": "dist-electron/main.js"
+  "main": "dist-electron/main/main.mjs"
 }
